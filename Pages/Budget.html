@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Budget</title>
+<link href="../pageBase.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="makeBudgetTable()">
+
+<div id="title">STEM Chemistry</div>
+
+
+<div id="content" left="300px">
+	<div id="budgetTable"> </div>
+	<div id="inputNumbers">
+		<input type="number" id="numberOne" value="0">
+		<input type="number" id="numberTwo" value="0">
+		<input type="number" id="numberThree" value="0">
+		<input type="number" id="numberFour" value="0">
+		<input type="number" id="numberFive" value="0">
+		<input type="number" id="numberSix" value="0">
+		<input type="number" id="numberSeven" value="0">
+		<button id="calcButton" onclick="addNumbers()">Get Total</button>
+		<p id="totalVal">$0</p>	
+	</div>
+</div>
+
+
+<script>	
+function makeBudgetTable(){
+	var ingredient = ["Ingredient", "Baking Soda", "Citric Acid", "Epsom Salt", "Essential Oil", "Olive Oil", "Water", "Food Coloring"];
+	var price = ["Price", "$4", "$3", "$3", "$5", "$2", "$4", "$3"];
+	
+	
+	var tableHTML = "";
+	var i = 0;
+	
+	tableHTML = tableHTML + '<table border="1" borderColor="000000"><tbody id="budgetTableBody" onLoad=makeDefintionTable()>';
+	
+	for (i = 0; i < ingredient.length; i++) { 
+    	tableHTML = tableHTML + '<tr><th class="budgetTermColumn">' + ingredient[i] + '</th>';
+		tableHTML = tableHTML + '<th class="budgetExColumn">' + price[i] + '</th></tr>';
+	}
+	
+    tableHTML = tableHTML + '</tbody></table>';
+
+	
+	document.getElementById("budgetTable").innerHTML = tableHTML;
+	
+}
+function addNumbers(){
+	var numOne = document.getElementById("numberOne").value;
+	var numTwo = document.getElementById("numberTwo").value;
+	var numThree = document.getElementById("numberThree").value;
+	var numFour = document.getElementById("numberFour").value;
+	var numFive = document.getElementById("numberFive").value;
+	var numSix = document.getElementById("numberSix").value;
+	var numSeven = document.getElementById("numberSeven").value;
+	var total = Number(numOne)*4+Number(numTwo)*3+Number(numThree)*3+Number(numFour)*5+Number(numFive)*2+Number(numSix)*4+Number(numSeven)*3;
+	
+	document.getElementById("totalVal").innerHTML = '$' + total;
+}
+	</script>
+
+
+<div id="navTable">
+  <table border="1" bordercolor="#000000">
+    <tbody>
+      <tr>
+        <th scope="col"><a class="navBarLink" href="Main.html" target="_self">Home</a></th>
+        <th scope="col"><a class="navBarLink" href="Definitions.html" target="_self">Definitions</a></th>
+        <th scope="col"><h class="navBarCurrent">Budget and Prices</h></th>
+        <th scope="col"><a class="navBarLink" href="Links.html" target="_self">Links</a></th>
+        <th scope="col"><a class="navBarLink" href="Pictures.html" target="_self">Pictures</a></th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div id="instructions">
+	<p>Instructions</p>
+	<p>1. Each group will receive 200 Bark Bux in the form of paper currency.<br/>
+   	   2. Teachers will give each group a budget sheet for them to do calculations.<br/>
+	   3. Students will work together to come up with a budget to get the amount of ingredients that they desire.<br/>
+	</p>
+</div>
+
+</body>
+</html>

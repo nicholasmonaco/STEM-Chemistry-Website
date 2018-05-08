@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Links</title>
+<link href="../pageBase.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="makeTable()">
+
+<div id="title">STEM Chemistry</div>
+
+
+<div id="definitionTable"> </div>
+
+<script>	
+	function makeTable(){
+		var linkDescs = ["Login to Canvas", "Vocabulary Crossword Activity", "Student Survey"];
+		var links = ["https://canvas.instructure.com/", "https://www.proprofs.com/games/crossword/furry-fizzies-vocabulary/", "https://goo.gl/forms/HQhlMqsDxjqg3SHC2"];	
+	
+		var tableHTML = "";
+		var i = 0;
+	
+		tableHTML = tableHTML + '<table style="margin: auto;" border="1" borderColor="000000"><tbody id="tableBody" onLoad=makeDefintionTable()>';
+	
+		for (i = 0; i < links.length; i++) { 
+			tableHTML = tableHTML + '<tr><th class="linkNameColumn">' + linkDescs[i] + '</th>';
+			tableHTML = tableHTML + '<th class="linkLinkColumn">' + '<a href="'+links[i]+'">'+links[i]+'</a></th></tr>';
+		}
+	
+		tableHTML = tableHTML + '</tbody></table>';
+
+	
+		document.getElementById("definitionTable").innerHTML = tableHTML;
+	
+}	
+</script>
+
+
+
+
+
+<div id="navTable">
+  <table border="1" bordercolor="#000000">
+    <tbody>
+      <tr>
+        <th scope="col"><a class="navBarLink" href="Main.html" target="_self">Home</a></th>
+        <th scope="col"><a class="navBarLink" href="Definitions.html" target="_self">Definitions</a></th>
+        <th scope="col"><a class="navBarLink" href="Budget.html" target="_self">Budget and Prices</a></th>
+        <th scope="col"><h class="navBarCurrent">Links</h></th>
+        <th scope="col"><a class="navBarLink" href="Pictures.html" target="_self">Pictures</a></th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+</body>
+</html>

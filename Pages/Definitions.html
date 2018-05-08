@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Definitions</title>
+<link href="../pageBase.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="makeDefinitionTable()">
+<div id="title">STEM Chemistry</div>
+
+
+<div id="definitionTable" style="align: center;"> </div>
+
+<script>	
+function makeDefinitionTable(){
+	var terms = ["Dissolve", "Solute", "Solvent", "Saturated", "Concentration", "Chemical Reaction", "Reactant", "Product"];
+	var termDefinitions = ["When the solute breaks up into smaller molecules.", "The substance that is dissolved by another substance.", "The substance that dissolves the other substance", "When a solution reaches the point where it cannot dissolve any more solute.", "The proportion of solute to solvent.", "A process that leads to the transformation of one element to another.", "A substance that takes part in and undergoes change during a reaction.", "A substance that is the result of an action or process."];
+	var termExamples = ["When salt is placed in water, the water dissolves the salt.", "Since the salt is being dissolved by the water, salt is the solute.", "Water is the substance doing the dissolving, so water is the solute.", "If you keep putting salt into the water and it's not dissolving anymore, it is saturated.", "If the solution is near saturated, it is considered concentrated, but if it is very unsaturated, then it is called diluted.", "Photosynthesis in plants is an example of a chemical reaction, turning carbon dioxide, sunlight, and water into energy and oxygen.", "The reactants for photosynthesis are carbon dioxide, sunlight and water.", "The products for photosynthesis are energy and oxygen."];
+	
+	
+	var tableHTML = "";
+	var i = 0;
+	
+	tableHTML = tableHTML + '<table style="margin: auto;" border="1" borderColor="000000"><thead style="color: white;"><tr><th>Word</th><th>Definition</th><th>Example</th></tr></thead><tbody id="definitionTableBody" onLoad=makeDefintionTable()>';
+	
+	for (i = 0; i < terms.length; i++) { 
+    	tableHTML = tableHTML + '<tr><th class="definitionTermColumn">' + terms[i] + '</th>';
+		tableHTML = tableHTML + '<th class="definitionExColumn">' + termDefinitions[i] + '</th>';
+		tableHTML = tableHTML + '<th class="definitionExColumn">' + termExamples[i] + '</th></tr>';
+	}
+	
+    tableHTML = tableHTML + '</tbody></table>';
+
+	
+	document.getElementById("definitionTable").innerHTML = tableHTML;
+	
+}	
+	</script>
+
+
+
+<div id="navTable">
+  <table border="1" bordercolor="#000000">
+    <tbody>
+      <tr>
+        <th scope="col"><a class="navBarLink" href="Main.html" target="_self">Home</a></th>
+        <th scope="col"><h class="navBarCurrent">Definitions</h></th>
+        <th scope="col"><a class="navBarLink" href="Budget.html" target="_self">Budget and Prices</a></th>
+        <th scope="col"><a class="navBarLink" href="Links.html" target="_self">Links</a></th>
+        <th scope="col"><a class="navBarLink" href="Pictures.html" target="_self">Pictures</a></th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+</body>
+
+
+
+
+
+</html>

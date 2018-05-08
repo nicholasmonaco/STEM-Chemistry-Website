@@ -1,0 +1,262 @@
+body {
+	background-color: #545454;
+	left: 0px;
+	top: 0px;
+}
+input[type=number]{
+	width: 50px;
+}
+#inputNumbers{
+	position: absolute;
+	left:600px;
+	top: 200px;
+}
+#numberTwo{
+	position:relative;
+	top: 48px;
+	left: -58px;
+}
+#numberThree{
+	position:relative;
+	top: 96px;
+	left: -116px;
+}
+#numberFour{
+	position:relative;
+	top: 144px;
+	left: -174px;
+}
+#numberFive{
+	position:relative;
+	top: 192px;
+	left: -232px;
+}
+#numberSix{
+	position:relative;
+	top: 240px;
+	left: -290px;
+}
+#numberSeven{
+	position:relative;
+	top: 288px;
+	left: -348px;
+}
+#calcButton{
+	position:relative;
+	top: 336px;
+	left: -405px;
+	z-index: 6;
+}
+#totalVal{
+	position:relative;
+	top: 336px;
+}
+#instructions{
+	position: absolute;
+	left:0px;
+	top:530px;
+	font-size: 50px;
+	font-family: Arial;
+
+}
+#title {
+	position: absolute;
+	width: 100%;
+	height: 65px;
+	top: 0px;
+	left: 0px;
+	z-index: 5;
+	text-align: center;
+	font-size: 60px;
+	font-family: Arial;
+	color: #e2e2e2;
+}
+
+#navTable {
+	position: absolute;
+	width: 100%;
+	height: 70px;
+	top: 70px;
+	left: 0px;
+}
+
+#definitionTable {
+	position: absolute;
+	width: 100%;
+	height: 70px;
+	top: 140px;
+	left: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	align-self: center;
+}
+#budgetTable {
+	position: absolute;
+	width: 1920px;
+	height: 70px;
+	top: 140px;
+	left: 0px;
+}
+
+#content {
+	width: 100%;
+	height: 100%;
+	left: 384px;
+	margin-left: auto;
+	margin-right: auto;
+	align-self: center;
+}
+
+table{
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	font-family: Arial;
+	font-size: 20px;
+}
+
+td, th {
+	border: 1px solid #999;
+	border-spacing: 0;
+	border-color: black;
+	height: 45px;
+	width: 384px;
+	padding: 1px;
+	background-color: #2b2a2a;
+}
+
+button {
+	top: 300px;
+	position: absolute;
+}
+
+.navBarLink{
+	color: #afaeae;
+	text-decoration: none;
+}
+
+.navBarCurrent{
+	color: #28c1ff;
+	text-decoration: none;
+}
+
+.definitionHeader{
+	color: white;
+	letter-spacing: 1px;
+	font-size: 16px;
+}
+
+.definitionBody{
+	color: lightgrey;
+	letter-spacing: 1px;
+	font-size: 16px;
+}
+
+.definitionExColumn{
+	background-color: #2b2a2a;
+	width: 450;
+	color: #afaeae;
+}
+
+.definitionTermColumn{
+	background-color: #2b2a2a;
+	width: 200px;
+	color: #e2e2e2;
+}
+.budgetTermColumn{
+	background-color: #2b2a2a;
+	width: 450px;
+	color: #e2e2e2;
+}
+.budgetExColumn{
+	background-color: #2b2a2a;
+	width: 375px;
+	color: #e2e2e2;
+}
+
+.linkNameColumn{
+	background-color: #2b2a2a;
+	width: 375px;  
+	color: #e2e2e2;
+}
+
+.linkLinkColumn{
+	background-color: #2b2a2a;
+	width: 650px;
+	
+}
+
+a:link{
+	color: #28c1ff;
+}
+
+.budgetHeader{
+	color: white;
+	letter-spacing: 1px;
+	font-size: 16px;
+}
+
+.budgetBody{
+	color: lightgrey;
+	letter-spacing: 1px;
+	font-size: 16px;
+}
+
+.budgetExColumn{
+	background-color: #2b2a2a;
+	width: 450;
+}
+
+.budgetTermColumn{
+	background-color: #2b2a2a;
+	width: 200px;
+}
+
+.pictureFormat{
+	position: absolute;
+	width: auto;
+	height: auto;
+	display: block;
+	max-width: 300px;
+	max-height: 300px;
+	overflow: hidden;
+}
+
+.picturePadding{
+	padding: 0;
+	border: 0;
+}
+
+.pictureColumn{
+	padding: 0;
+	border: 0;
+	background-color: #2b2a2a;
+}
+
+.picTable{
+	border: 0;
+	padding: 10px;
+}
+
+.homeDesc{
+	color: #afaeae;
+	font-size: 18px;
+	font-family: Arial;
+}
+
+#mainContent{
+	align-self: center;
+	position: absolute;
+	width: 99%;
+	height: 70px;
+	top: 200px;
+	text-align: center;
+}
+
+#mainContentItem{
+	margin-left: auto;
+	margin-right: auto;
+	align-self: center;
+	display: block;
+	
+}

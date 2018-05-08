@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pictures</title>
+<link href="../pageBase.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="makeImageGrid()">
+
+<div id="title">STEM Chemistry</div>
+
+
+<div id="definitionTable"> </div>
+
+<script>	
+	function makeTable(){
+		var pics = ["1.png", "2.jpg", "3.jpg", "4.png"];
+		
+		var tableHTML = "";
+		var i = 0;
+		var x = 0;
+	
+		tableHTML = tableHTML + '<table class="picTable"><tbody id="tableBody" onLoad=makeDefintionTable()>';
+	
+		for (i = 0; i < pics.length; i++) { 
+			tableHTML = tableHTML + '<tr class="picturePadding">';
+			for(x=0;x<3;x++){
+				if(i<pics.length){
+					tableHTML = tableHTML + '<th class="pictureColumn" left="' + ((450*x) + (50*x)) +'px"><img width="450px" height="auto" class="pictureFormat" src=pics/' + pics[i] + '></img></th>';
+				}
+ 			i++;
+			}
+			x=0;
+			tableHTML = tableHTML + '</tr>';
+		}
+	
+		tableHTML = tableHTML + '</tbody></table>';
+
+	
+		document.getElementById("definitionTable").innerHTML = tableHTML;
+	
+}	
+	
+	
+	function makeImageGrid(){
+		var pics = ["1.png", "2.jpg", "3.jpg"];
+	
+		var tableHTML = "";
+		var i = 0;
+		var x = 0;
+				
+		for (i = 0; i < pics.length; i=i) { 
+			for(x=0;x<3;x++){
+				if(i<pics.length){
+					tableHTML = tableHTML + '<img width="auto" height="auto" style="left: ' + ((300*x) + (30*x)) +'px; top:'+((300*i)+(30*i))+'" class="pictureFormat" src="../images/pics/' + pics[i] + '"></img>';
+				}
+ 			i++;
+			}
+			x=0;
+		}			
+		document.getElementById("definitionTable").innerHTML = tableHTML;
+
+	}
+</script>
+
+
+<div id="navTable">
+  <table border="1" bordercolor="#000000">
+    <tbody>
+      <tr>
+        <th scope="col"><a class="navBarLink" href="Main.html" target="_self">Home</a></th>
+        <th scope="col"><a class="navBarLink" href="Definitions.html" target="_self">Definitions</a></th>
+        <th scope="col"><a class="navBarLink" href="Budget.html" target="_self">Budget and Prices</a></th>
+        <th scope="col"><a class="navBarLink" href="Links.html" target="_self">Links</a></th>
+        <th scope="col"><h class="navBarCurrent">Pictures</h></th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+</body>
+</html>
